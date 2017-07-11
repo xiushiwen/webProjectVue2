@@ -29,6 +29,6 @@ module.exports = {
   },
   // 定义的全局变量需要再这里声明
   'globals': {
-    'HFE_FLIGHT': true
+    'GLOBALS_LOGIN': true
   }
 }

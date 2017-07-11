@@ -1,5 +1,5 @@
 <template>
-    <div class="login">
+    <div class="login" :class="{'appLogin': fromPage === 'app', 'h5Login': fromPage === 'h5'}">
         <m-header></m-header>
         <div class="content">
             <tab></tab>
@@ -23,8 +23,8 @@
         },
         data () {
             return {
-                title: '登陆',
-                operate: '注册'
+                is_h5: GLOBALS_LOGIN.is_h5,
+                fromPage: GLOBALS_LOGIN.from_page
             };
         },
         methods: {

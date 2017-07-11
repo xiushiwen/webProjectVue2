@@ -4,7 +4,8 @@ import qs from 'querystring';
 (function (self) {
     let params = qs.parse(location.search.slice(1));
 
-    self.HFE_FLIGHT = {
-        is_h5: params.h5_source === 'tmc' || Boolean(params.h5)
+    self.GLOBALS_LOGIN = {
+        is_h5: Boolean(params.h5),
+        from_page: params.fromPage
     };
 })(typeof window !== 'undefined' ? window : this);

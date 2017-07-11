@@ -38,7 +38,12 @@
         text-align: center;
         position: relative;
         .operate {
-            color: #4789FF;
+            .appLogin & {
+                color: $app_theme_color;
+            }
+            .h5Login & {
+                color: $h5_theme_color;
+            }
             font-size: .3rem;
             position: absolute;
             right: .2rem;

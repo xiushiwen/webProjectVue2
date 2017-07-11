@@ -158,7 +158,7 @@ var webpackConfig = merge(baseWebpackConfig, {
                           file.splice(-1, 0, hash);
                         }
                         file = file.join('.');
-                        return prefix + '="' + handlePath(config.build.assetsRoot, item.substr(6), file) + '"';
+                        return prefix + '="' + config.build.assetsPublicPath.substring(0,config.build.assetsPublicPath.length-1) + handlePath(config.build.assetsRoot, item.substr(6), file) + '"';
                         //return prefix + '="' + handlePathPrefix + handlePath(config.build.assetsRoot, item.substr(6), file) + '"';
                       }
                   }
